@@ -1,0 +1,83 @@
+/*
+	This is Grid 
+	
+	20 November 2013
+
+*/
+
+html {}
+body {}
+
+/* basic grid */
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
+	float: left;
+	margin: 0 1%;
+} 
+
+.grid-1 {width: 6.333%;}
+.grid-2 {width: 14.667%;}
+.grid-3 {width: 23%;}
+.grid-4 {width: 31.333%;}
+.grid-5 {width: 39.667%;}
+.grid-6 {width: 48%;}
+.grid-7 {width: 56.333%;}
+.grid-8 {width: 64.667%;}
+.grid-9 {width: 73%;}
+.grid-10 {width: 81.333%;}
+.grid-11 {width: 89.667%;}
+.grid-12 {width: 98%;}
+
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
+
+[class^="grid-"] > .grid-1 {width: 6.5%;}
+[class^="grid-"] > .grid-2 {width: 15%;}
+[class^="grid-"] > .grid-3 {width: 23.5%;}
+[class^="grid-"] > .grid-4 {width: 32%;}
+[class^="grid-"] > .grid-5 {width: 40.5%;}
+[class^="grid-"] > .grid-6 {width: 49%;}
+[class^="grid-"] > .grid-7 {width: 57.5%;}
+[class^="grid-"] > .grid-8 {width: 66%;}
+[class^="grid-"] > .grid-9 {width: 74.5%;}
+[class^="grid-"] > .grid-10 {width: 83%;}
+[class^="grid-"] > .grid-11 {width: 91.5%;}
+[class^="grid-"] > .grid-12 {width: 100%;}
+
+[class^="grid-"] > [class^="grid-"]:first-child {margin-left: 0;}
+[class^="grid-"] > [class^="grid-"]:last-child {margin-right: 0;}
+
+/* additional column grid */
+[class^="col"] > .item {}
+.col2 > .item, .col3 > .item, .col4 > .item, .col5 > .item {float: left; margin-left: 2%;}
+.col2 > .item:nth-child(2n+1), .col3 > .item:nth-child(3n+1), .col4 > .item:nth-child(4n+1), .col5 > .item:nth-child(5n+1) {
+	clear: both;
+	margin-left: 0;
+}
+
+.col2 > .item {width: 49%;}
+.col3 > .item {width: 32%;}
+.col4 > .item {width: 23.5%;}
+.col5 > .item {width: 18.4%;}
+
+
+/* clears */
+.container {}
+.container:after, .clear:after, [class^="col"]:after {content: ""; display: block; clear: both;}
+
+/* valigner */
+.valigner {display: table; width: 100%;}
+.valigner .valigner-row {display: table-row;}
+.valigner .valigner-cell {display: table-cell; vertical-align: middle;}
+
+/* common styles */
+a {}
+a img {outline: none; border:none;}
+p {}
+h1, h2, h3, h4, h5, h6 {}
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
