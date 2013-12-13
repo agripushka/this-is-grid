@@ -54,6 +54,9 @@ body {}
 	clear: both;
 	margin-left: 0;
 }
+.col2 > .item:first-child, .col3 > .item:first-child, .col4 > .item:first-child, .col5 > .item:first-child {
+	margin-left: 0;
+}
 
 .col2 > .item {width: 49%;}
 .col3 > .item {width: 32%;}
